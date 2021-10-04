@@ -1,0 +1,184 @@
+<html>
+    <head>
+    <body>
+        <title>Dishonored Calendar Converter</title> 
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        	<style>
+body {background-color: white;}
+h1 {
+    color: brown;
+    font-family: Arial;
+    font-size: 150%;
+}
+p  {
+    color: brown;
+    font-family: Arial;
+    font-size: 130%;
+}
+i {
+	color: brown;
+	font-family:New Age Gothic;
+	font-size:100%;
+}
+
+
+</style>
+  </head>
+  <h1>Dishonored Calendar Conversion v0.0.8</h1>
+   <body>
+ <i>
+    Today is the 
+    <script language="javascript" type="text/javascript">
+       function daysIntoYear(date){
+    return ((Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000) - 1;
+}
+
+function enumerate(num){
+    if (num % 10 == 1) {
+        return `${num}st`;
+    } else if (num % 10 == 2) {
+        return `${num}nd`;
+    } else if (num % 10 == 3) {
+        return `${num}rd`;
+    } else {
+        return `${num}th`;
+    }
+}
+
+var months = [
+    "Earth",
+    "Harvest",
+    "Nets",
+    "Rain",
+    "Wind",
+    "Darkness",
+    "High Cold",
+    "Ice",
+    "Hearths",
+    "Seeds",
+    "Timber",
+    "Clans",
+    "Songs"
+];
+
+function getConvertedDate(d){
+    var today = daysIntoYear(d);
+    var feast = 196;
+    var lastDay = 364;
+    var shiftedDay = -1;
+
+    var isLeapYear = new Date(d.getFullYear(), 1, 29).getMonth() == 1;
+    if (isLeapYear) {
+        if (today < feast) {
+            shiftedDay =  today + (lastDay - feast);
+        } else if (today == feast) {
+            return "1st Day,<br>Fugue Feast";
+        } else if (today == feast + 1){
+            return "2nd Day,<br>Fugue Feast";
+        } else if (today > feast + 1) {
+            shiftedDay = today - feast - 2;
+        }
+
+        return `${enumerate(shiftedDay % 28 + 1)} Day,<br>The Month of ${months[Math.floor(shiftedDay/28)]}`;
+    } else {
+        if (today < feast) {
+            shiftedDay = today + (lastDay - feast);
+        } else if (today == feast) {
+            return "Fugue Feast";
+        } else if (today > feast) {
+            shiftedDay = today - feast - 1;
+        }
+
+        return `${enumerate(shiftedDay % 28 + 1)} Day,<br>The Month of ${months[Math.floor(shiftedDay/28)]}`;
+    }
+}
+
+var d = new Date();
+document.write(getConvertedDate(d));	
+</script>
+        <script>
+            function daysIntoYear(date){
+                return ((Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000) - 1;
+            }
+
+            function enumerate(num){
+                if (num % 10 == 1) {
+                    return `${num}st`;
+                } else if (num % 10 == 2) {
+                    return `${num}nd`;
+                } else if (num % 10 == 3) {
+                    return `${num}rd`;
+                } else {
+                    return `${num}th`;
+                }
+            }
+
+            var months = [
+                "Earth",
+                "Harvest",
+                "Nets",
+                "Rain",
+                "Wind",
+                "Darkness",
+                "High Cold",
+                "Ice",
+                "Hearths",
+                "Seeds",
+                "Timber",
+                "Clans",
+                "Songs"
+            ];
+
+            function getConvertedDate(d){
+                var today = daysIntoYear(d);
+                var feast = 196;
+                var lastDay = 364;
+                var shiftedDay = -1;
+
+                var isLeapYear = new Date(d.getFullYear(), 1, 29).getMonth() == 1;
+                if (isLeapYear) {
+                    if (today < feast) {
+                        shiftedDay =  today + (lastDay - feast);
+                    } else if (today == feast) {
+                        return "1st Day,<br>Fugue Feast";
+                    } else if (today == feast + 1){
+                        return "2nd Day,<br>Fugue Feast";
+                    } else if (today > feast + 1) {
+                        shiftedDay = today - feast - 2;
+                    }
+
+                    return `${enumerate(shiftedDay % 28 + 1)} Day,<br>The Month of ${months[Math.floor(shiftedDay/28)]}`;
+                } else {
+                    if (today < feast) {
+                        shiftedDay = today + (lastDay - feast);
+                    } else if (today == feast) {
+                        return "Fugue Feast";
+                    } else if (today > feast) {
+                        shiftedDay = today - feast - 1;
+                    }
+
+                    return `${enumerate(shiftedDay % 28 + 1)} Day,<br>The Month of ${months[Math.floor(shiftedDay/28)]}`;
+                }
+            }
+
+            $(function() {
+                $("#dateField").datepicker({
+                    onClose: function() {
+                        var d = $.datepicker.parseDate('mm/dd/yy', $(this).val());
+                        $("#convertedDate").html(getConvertedDate(d));
+                    }
+                });
+            });
+        </script>
+    </head>
+
+        <p>Convert date: <input type="text" id="dateField"></p>
+        <p id="convertedDate"></p>
+        	</i><p><h1>Confirm:</h1>
+	<img src="https://78.media.tumblr.com/c2989397d1a452ddfc3535db53a3ad4b/tumblr_ovujlhQwOW1wvkse0o1_1280.png"/>
+    </body>
+</html>
