@@ -10,3 +10,7 @@ Some things to note:
 * The Month of Harvest falls within the Empire's summer, The Month of Wind within its fall, and The Months of Darkness, High Cold and Ice within its winter. They have been mapped as closely as possible to align with our real world seasons in this script.
 
 Thank you for reading, and please enjoy!
+
+Code by: <a href="https://github.com/dhconverter">Valarie Ryan</a>, <a href="https://github.com/adlez27">Mark Beltran</a>
+
+*Please do not contact our programmers regarding bug reports or usage permissions.*
