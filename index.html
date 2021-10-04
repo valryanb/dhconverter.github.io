@@ -1,5 +1,8 @@
 <html>
     <head>
+      <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+
+    
     <body>
         <title>Dishonored Calendar Converter</title> 
         
@@ -8,29 +11,154 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         
         	<style>
-body {background-color: white;}
+body {background-color: black;}
+
 h1 {
     color: brown;
     font-family: Arial;
     font-size: 150%;
 }
+
 p  {
-    color: brown;
-    font-family: Arial;
+    color: white;
+    font-family: New Age Gothic;
     font-size: 130%;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 8px #000000, 0 0 8px #000000;
+
 }
+
 i {
-	color: brown;
+	color: white;
 	font-family:New Age Gothic;
 	font-size:100%;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 8px #000000, 0 0 8px #000000;
+
+
 }
 
+#header {
+    background-image:url(https://wallpaper.dog/large/10699132.jpg);
+    background-repeat:no-repeat;
+    background-color:black;
+    background-size:cover;
+    background-position:center;
+    height: fixed;
+    padding: 0px 200px
+}
+
+h2 {
+    color: white;
+    font-family: New Age;
+    text-indent:15pt;
+    text-align: center;
+    text-transform:none;
+    padding: 50px 200px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 8px #000000, 0 0 8px #000000;
+}
+h1 {
+    color: white;
+    font-family: Verdana;
+    text-indent:15pt;
+    text-align: center;
+    text-transform:none;
+    padding: 2px 200px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 8px #000000, 0 0 8px #000000;
+	font-size:40%;
+}
+sub {
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    font-size:60%;
+    position:center;
+    padding:50px 0px 50px 0px;
+}
+a{
+    color:white;
+    font-family:Tahoma;
+    font-size:100%;
+    text-transform:uppercase;
+}
+a#cthrough {
+    display: block;
+    text-align: center;
+    width: 150px;
+    margin: 0px auto;
+    padding: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial;
+    border: 1px solid #fff;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.first {
+    width: 100%;
+    height: 1000px;
+    background: none;
+}
+
+.second {
+    width: 100%;
+    height: 100px;
+    background: none;
+}
+
+button {
+    background:none;
+    border:none;
+}
+
+section {
+    display:block;
+    width:500px;
+    height:100px;
+    background-image:url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/15d6cc83-170c-4aa8-8a4e-c24105ca184e/daq53vf-955123ff-28d9-4620-9967-cfb78c6222a9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE1ZDZjYzgzLTE3MGMtNGFhOC04YTRlLWMyNDEwNWNhMTg0ZVwvZGFxNTN2Zi05NTUxMjNmZi0yOGQ5LTQ2MjAtOTk2Ny1jZmI3OGM2MjIyYTkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.J2lyeNcqEMLWBjOzhERy-UB87CTtb4O9P0No-SimlzE");
+    background-size:cover;
+    border: none;
+    border-radius: 10px;
+    text-align:center;
+    padding: 100px 50px;
+    position:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+footer {
+    position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: left;
+  margin-left:auto;
+  margin-right:auto;
+  padding:300px 0px 0px;
+}
 
 </style>
-  </head>
-  <h1>Dishonored Calendar Conversion v0.0.8</h1>
+
+ <img src="https://64.media.tumblr.com/8c326b1b2bd39f4fbfc0f21bf555bf4a/e8c1a38ecb1c4966-53/s540x810/e407ad6e314a6e1363f76f162d9a21c461a89cd3.png" 
+     max-width:50% max-height:50%/></head>
    <body>
- <i>
+   <div id="header">
+    <h2>Convert any selected date to the calendar used within the games <i>Dishonored</i>, <i>Dishonored 2</i> and <i>Dishonored: Death of the Outsider</i> by Arkane Studios. </h2><br><h1>This is a fan-made project based on the <a href="https://archive.fo/wwAYG">DH 2 Calendar Hypothesis</a> by Drer. This is a hypothetical conversion and is no way canonized by or affiliated with Arkane Studios. There are numerous other calendar hypothesis, but the one utilized for this script relies on the above linked conversion.<p><br>
+
+</h1><sub>
+<div class="first"><button type="button"><a href="#" id="cthrough">Go</a></button></sub></div><script language="javascript" type="text/javascript">
+
+$("button").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".second").offset().top},
+        'slow');
+});
+    
+</script>
+</div><section>
+<div class="second">
+<i><br></br>
     Today is the 
     <script language="javascript" type="text/javascript">
        function daysIntoYear(date){
@@ -174,11 +302,9 @@ document.write(getConvertedDate(d));
                 });
             });
         </script>
-    </head>
 
         <p>Convert date: <input type="text" id="dateField"></p>
-        <p id="convertedDate"></p>
-        	</i><p><h1>Confirm:</h1>
-	<img src="https://78.media.tumblr.com/c2989397d1a452ddfc3535db53a3ad4b/tumblr_ovujlhQwOW1wvkse0o1_1280.png"/>
+        <p id="convertedDate"></p></section></div>
+        	</i><p><footer><a href="https://78.media.tumblr.com/c2989397d1a452ddfc3535db53a3ad4b/tumblr_ovujlhQwOW1wvkse0o1_1280.png">Visual Calendar Guide</a> | Github</footer>
     </body>
 </html>
