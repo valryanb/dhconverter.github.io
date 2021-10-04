@@ -11,6 +11,6 @@ Some things to note:
 
 Thank you for reading, and please enjoy!
 
-Code by: <a href="https://github.com/dhconverter">Valarie Ryan</a>, <a href="https://github.com/adlez27">Mark Beltran</a>
+Code by: <a href="https://github.com/dhconverter">Effy Ryan</a>, <a href="https://github.com/adlez27">Mark Beltran</a>
 
 *Please do not contact our programmers regarding bug reports or usage permissions.*
