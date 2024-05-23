@@ -1,310 +1,59 @@
 <html>
     <head>
-      <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
-
-    
-    <body>
         <title>Dishonored Calendar Converter</title> 
-        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
-        	<style>
-body {background-color: black;}
-
-h1 {
-    color: brown;
-    font-family: Arial;
-    font-size: 150%;
-}
-
-p  {
-    color: white;
-    font-family: New Age Gothic;
-    font-size: 130%;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 8px #000000, 0 0 8px #000000;
-
-}
-
-i {
-	color: white;
-	font-family:New Age Gothic;
-	font-size:100%;
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 8px #000000, 0 0 8px #000000;
-
-
-}
-
-#header {
-    background-image:url(https://wallpaper.dog/large/10699132.jpg);
-    background-repeat:no-repeat;
-    background-color:black;
-    background-size:cover;
-    background-position:center;
-    height: fixed;
-    padding: 0px 200px
-}
-
-h2 {
-    color: white;
-    font-family: New Age;
-    text-indent:15pt;
-    text-align: center;
-    text-transform:none;
-    padding: 50px 200px;
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 8px #000000, 0 0 8px #000000;
-}
-h1 {
-    color: white;
-    font-family: Verdana;
-    text-indent:15pt;
-    text-align: center;
-    text-transform:none;
-    padding: 2px 200px;
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 8px #000000, 0 0 8px #000000;
-	font-size:40%;
-}
-sub {
-    color: white;
-    font-family: Arial;
-    text-align: center;
-    font-size:60%;
-    position:center;
-    padding:50px 0px 50px 0px;
-}
-a{
-    color:white;
-    font-family:Tahoma;
-    font-size:100%;
-    text-transform:uppercase;
-}
-a#cthrough {
-    display: block;
-    text-align: center;
-    width: 150px;
-    margin: 0px auto;
-    padding: 20px;
-    color: white;
-    text-transform: uppercase;
-    font-family: Arial;
-    border: 1px solid #fff;
-    text-decoration: none;
-    border-radius: 10px;
-}
-
-.first {
-    width: 100%;
-    height: 1000px;
-    background: none;
-}
-
-.second {
-    width: 100%;
-    height: 100px;
-    background: none;
-}
-
-button {
-    background:none;
-    border:none;
-}
-
-section {
-    display:block;
-    width:500px;
-    height:100px;
-    background-image:url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/15d6cc83-170c-4aa8-8a4e-c24105ca184e/daq53vf-955123ff-28d9-4620-9967-cfb78c6222a9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE1ZDZjYzgzLTE3MGMtNGFhOC04YTRlLWMyNDEwNWNhMTg0ZVwvZGFxNTN2Zi05NTUxMjNmZi0yOGQ5LTQ2MjAtOTk2Ny1jZmI3OGM2MjIyYTkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.J2lyeNcqEMLWBjOzhERy-UB87CTtb4O9P0No-SimlzE");
-    background-size:cover;
-    border: none;
-    border-radius: 10px;
-    text-align:center;
-    padding: 100px 50px;
-    position:center;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-footer {
-    position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: black;
-  color: white;
-  text-align: left;
-  margin-left:auto;
-  margin-right:auto;
-  padding:300px 0px 0px;
-}
-
-</style>
-
- <img src="https://64.media.tumblr.com/8c326b1b2bd39f4fbfc0f21bf555bf4a/e8c1a38ecb1c4966-53/s540x810/e407ad6e314a6e1363f76f162d9a21c461a89cd3.png" 
-     max-width:50% max-height:50%/></head>
+        <script src="/script.js"></script>
+        <link rel="stylesheet" href="/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
+     </head>
    <body>
-   <div id="header">
-    <h2>Convert any selected date to the calendar used within the games <i>Dishonored</i>, <i>Dishonored 2</i> and <i>Dishonored: Death of the Outsider</i> by Arkane Studios. </h2><br><h1>This is a fan-made project based on the <a href="https://archive.fo/wwAYG">DH 2 Calendar Hypothesis</a> by Drer. This is a hypothetical conversion and is no way canonized by or affiliated with Arkane Studios. There are numerous other calendar hypothesis, but the one utilized for this script relies on the above linked conversion.<p><br>
-
-</h1><sub>
-<div class="first"><button type="button"><a href="#" id="cthrough">Go</a></button></sub></div><script language="javascript" type="text/javascript">
-
-$("button").click(function() {
-    $('html,body').animate({
-        scrollTop: $(".second").offset().top},
-        'slow');
-});
     
-</script>
-</div><section>
-<div class="second">
-<i><br></br>
-    Today is the 
-    <script language="javascript" type="text/javascript">
-       function daysIntoYear(date){
-    return ((Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000) - 1;
-}
+    <div class="info-hero" id="header">
+    <nav><img src="/logo.png" style="width: 400px; margin: 20px; position:relative;"></nav>
 
-function enumerate(num){
-    if (num % 10 == 1) {
-        return `${num}st`;
-    } else if (num % 10 == 2) {
-        return `${num}nd`;
-    } else if (num % 10 == 3) {
-        return `${num}rd`;
-    } else {
-        return `${num}th`;
-    }
-}
+    <h1>Convert any selected date to the calendar used within the games <i>Dishonored</i>, <i>Dishonored 2</i> and 
+    <i>Dishonored: Death of The Outsider</i> by <span style="text-shadow: 0 0 8px #fff; color: white;
+">Arkane Studios</span> .</h1>
+<button onclick="clickScroll()" id="btn"><b>Go</b></button>
+<p style="font-size: 11px; ">
+This is an <span style="text-decoration: 1px solid underline">UNOFFICIAL</span> fan-made project based on the <a id="shadow" href="https://archive.fo/wwAYG">DH 2 CALENDAR HYPOTHESIS</a> by Drer. This is a hypothetical conversion and is no way canonized by or affiliated with Arkane Studios/Bethesda. There are numerous other calendar conversion theories, but the one utilized for this script relies on the above linked conversion.
+</p>
 
-var months = [
-    "Earth",
-    "Harvest",
-    "Nets",
-    "Rain",
-    "Wind",
-    "Darkness",
-    "High Cold",
-    "Ice",
-    "Hearths",
-    "Seeds",
-    "Timber",
-    "Clans",
-    "Songs"
-];
 
-function getConvertedDate(d){
-    var today = daysIntoYear(d);
-    var feast = 196;
-    var lastDay = 364;
-    var shiftedDay = -1;
+</div>
+<div id="tear"></div>
 
-    var isLeapYear = new Date(d.getFullYear(), 1, 29).getMonth() == 1;
-    if (isLeapYear) {
-        if (today < feast) {
-            shiftedDay =  today + (lastDay - feast);
-        } else if (today == feast) {
-            return "1st Day,<br>Fugue Feast";
-        } else if (today == feast + 1){
-            return "2nd Day,<br>Fugue Feast";
-        } else if (today > feast + 1) {
-            shiftedDay = today - feast - 2;
+<div class="emily">
+    <p style="line-height: 50px;">
+ <i> Today is the <script>
+    var d = new Date();
+    document.write(getConvertedDate(d));
+    </script>
+</p> <script>
+$(function() {
+    $("#dateField").datepicker({
+        onClose: function() {
+            var d = $.datepicker.parseDate('mm/dd/yy', $(this).val());
+            $("#convertedDate").html(getConvertedDate(d));
         }
+    });
+});
 
-        return `${enumerate(shiftedDay % 28 + 1)} Day,<br>The Month of ${months[Math.floor(shiftedDay/28)]}`;
-    } else {
-        if (today < feast) {
-            shiftedDay = today + (lastDay - feast);
-        } else if (today == feast) {
-            return "Fugue Feast";
-        } else if (today > feast) {
-            shiftedDay = today - feast - 1;
-        }
-
-        return `${enumerate(shiftedDay % 28 + 1)} Day,<br>The Month of ${months[Math.floor(shiftedDay/28)]}`;
-    }
-}
-
-var d = new Date();
-document.write(getConvertedDate(d));	
 </script>
-        <script>
-            function daysIntoYear(date){
-                return ((Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000) - 1;
-            }
-
-            function enumerate(num){
-                if (num % 10 == 1) {
-                    return `${num}st`;
-                } else if (num % 10 == 2) {
-                    return `${num}nd`;
-                } else if (num % 10 == 3) {
-                    return `${num}rd`;
-                } else {
-                    return `${num}th`;
-                }
-            }
-
-            var months = [
-                "Earth",
-                "Harvest",
-                "Nets",
-                "Rain",
-                "Wind",
-                "Darkness",
-                "High Cold",
-                "Ice",
-                "Hearths",
-                "Seeds",
-                "Timber",
-                "Clans",
-                "Songs"
-            ];
-
-            function getConvertedDate(d){
-                var today = daysIntoYear(d);
-                var feast = 196;
-                var lastDay = 364;
-                var shiftedDay = -1;
-
-                var isLeapYear = new Date(d.getFullYear(), 1, 29).getMonth() == 1;
-                if (isLeapYear) {
-                    if (today < feast) {
-                        shiftedDay =  today + (lastDay - feast);
-                    } else if (today == feast) {
-                        return "1st Day,<br>Fugue Feast";
-                    } else if (today == feast + 1){
-                        return "2nd Day,<br>Fugue Feast";
-                    } else if (today > feast + 1) {
-                        shiftedDay = today - feast - 2;
-                    }
-
-                    return `${enumerate(shiftedDay % 28 + 1)} Day,<br>The Month of ${months[Math.floor(shiftedDay/28)]}`;
-                } else {
-                    if (today < feast) {
-                        shiftedDay = today + (lastDay - feast);
-                    } else if (today == feast) {
-                        return "Fugue Feast";
-                    } else if (today > feast) {
-                        shiftedDay = today - feast - 1;
-                    }
-
-                    return `${enumerate(shiftedDay % 28 + 1)} Day,<br>The Month of ${months[Math.floor(shiftedDay/28)]}`;
-                }
-            }
-
-            $(function() {
-                $("#dateField").datepicker({
-                    onClose: function() {
-                        var d = $.datepicker.parseDate('mm/dd/yy', $(this).val());
-                        $("#convertedDate").html(getConvertedDate(d));
-                    }
-                });
-            });
-        </script>
-
-        <p>Convert date: <input type="text" id="dateField"></p>
-        <p id="convertedDate"></p></section></div>
-        	</i><p><footer><a href="https://78.media.tumblr.com/c2989397d1a452ddfc3535db53a3ad4b/tumblr_ovujlhQwOW1wvkse0o1_1280.png">Visual Calendar Guide</a> | Github</footer>
-    </body>
-</html>
+   <p style="font-size: 20px;">Convert date: <input type="text" id="dateField">
+</p>
+        <p id="convertedDate"></p>
+    </i>
+</div>
+<div id="footer">
+     <p>          
+	<a href="https://78.media.tumblr.com/c2989397d1a452ddfc3535db53a3ad4b/tumblr_ovujlhQwOW1wvkse0o1_1280.png">VISUAL CALENDAR GUIDE</a> | Github
+      Dishonored Calendar Conversion v0.0.9
+    </p> 
+</div>
+</body>
+</html> 
